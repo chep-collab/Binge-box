@@ -10,10 +10,11 @@ import ComingSoon from './pages/ComingSoon';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import MovieDetails from './pages/MovieDetails';
+import StreamBuy from './pages/StreamBuy'; // Import StreamBuy component
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import Footer from './components/Footer'; // Import Footer component
-import './styles.css'; // Corrected import
+import Footer from './components/Footer';
+import './styles.css';
 
 function App() {
     const [user, setUser] = useState(null);
@@ -31,26 +32,31 @@ function App() {
     if (loading) {
         return <div>Loading...</div>;
     }
-    const apiKey = "9346dda45797685183020b41bacc2d54";
+
+    // Use import.meta.env for environment variables in Vite
+    const apiKey = import.meta.env.VITE_REACT_APP_TMDB_API_KEY || "9346dda45797685183020b41bacc2d54";
+
     return (
         <Router>
             <div className="app">
                 <Navbar user={user} />
-                <HeroSection /> {/* Add this line to include HeroSection  */}
+                <HeroSection />
                 <Routes>
                     <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
                     <Route path="/logout" element={<Logout />} />
                     <Route path="/" element={user ? <Home apiKey={apiKey} /> : <Navigate to="/login" />} />
                     <Route path="/catalog" element={user ? <Catalog apiKey={apiKey} /> : <Navigate to="/login" />} />
                     <Route path="/coming-soon" element={user ? <ComingSoon /> : <Navigate to="/login" />} />
-                    <Route path="/about-us" element={user ? <AboutUs /> : <Login />} />
-                    <Route path="/contact-us" element={user ? <ContactUs /> : <Login />} />
+                    <Route path="/about-us" element={user ? (user ? <AboutUs /> : <Navigate to="/login" />) : <Navigate to="/login"/>} /> {/* Corrected route */}
+                    <Route path="/contact-us" element={user ? (user ? <ContactUs /> : <Navigate to="/login" />) : <Navigate to="/login"/>} /> {/* Corrected route */}
                     <Route path="/movie/:id" element={user ? <MovieDetails apiKey={apiKey} /> : <Login />} />
+                    <Route path="/stream-buy/:id" element={user ? <StreamBuy apiKey={apiKey} /> : <Login />} /> {/* Add StreamBuy route */}
                 </Routes>
-                <Footer /> {/* Add Footer component */}
+                <Footer />
             </div>
         </Router>
     );
 }
 
 export default App;
+

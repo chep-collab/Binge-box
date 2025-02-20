@@ -11,21 +11,21 @@ body {
     text-align: center;
     padding: 20px;
   }
-
+  
   /* Navbar styles */
-.navbar {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; /* Take full width */
-  position: fixed; /* To make it stick to the top */
-  top: 0; /* Align to the very top */
-  left: 0; /* Align to the very left */
-  z-index: 100; /* Ensure it stays on top of other elements */
-}
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Take full width */
+    position: fixed; /* To make it stick to the top */
+    top: 0; /* Align to the very top */
+    left: 0; /* Align to the very left */
+    z-index: 100; /* Ensure it stays on top of other elements */
+  }
   
   .navbar-brand {
     font-size: 1.5em;
@@ -144,7 +144,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
   }
-
+  
   .catalog h2 {
     color: #333;
     margin-bottom: 15px;
@@ -165,7 +165,8 @@ body {
   .coming-soon,
   .about-us,
   .contact-us,
-  .movie-details {
+  .movie-details,
+  .stream-buy {
     padding: 20px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -206,6 +207,7 @@ body {
   .contact-us p {
     color: #666;
   }
+  
   .hero-section {
     position: relative;
     height: 500px; /* Adjust as needed */
@@ -226,7 +228,7 @@ body {
     color: white;
     text-align: center;
   }
-
+  
   /* Login styles */
   .login {
     padding: 20px;
@@ -256,8 +258,9 @@ body {
   .login button:hover {
     background-color: #0056b3;
   }
-/* Default styles for larger screens */
-.element {
+  
+  /* Default styles for larger screens */
+  .element {
     font-size: 16px;
     padding: 20px;
   }
@@ -269,8 +272,9 @@ body {
       padding: 10px;
     }
   }
+  
   /* Footer styles */
-.footer {
+  .footer {
     background-color: #333;
     color: white;
     padding: 20px;
@@ -299,10 +303,10 @@ body {
   
   /* Other styles... */
   /* In your Navbar.css (or relevant CSS file) */
-.navbar {
-    display: flex;           /* Enable Flexbox */
-    justify-content: space-between;  /* Distribute items evenly */
-    align-items: center;       /* Vertically align items */
+  .navbar {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Vertically align items */
     padding: 10px;
   }
   
@@ -311,14 +315,14 @@ body {
   }
   
   .nav-links {
-    display: flex;           /* Enable Flexbox on the links */
-    list-style: none;        /* Remove bullet points */
+    display: flex; /* Enable Flexbox on the links */
+    list-style: none; /* Remove bullet points */
     margin: 0;
     padding: 0;
   }
   
   .nav-links li {
-    margin-left: 20px;      /* Spacing between links */
+    margin-left: 20px; /* Spacing between links */
   }
   
   /* Media query for smaller screens */
@@ -330,16 +334,17 @@ body {
   
     .nav-links {
       flex-direction: column; /* Stack links vertically */
-      width: 100%;            /* Take full width */
+      width: 100%; /* Take full width */
       margin-top: 10px;
     }
   
     .nav-links li {
-      margin: 5px 0;        /* Spacing between links */
+      margin: 5px 0; /* Spacing between links */
     }
   }
+  
   /* In your HeroSection.css (or relevant CSS file) */
-.hero-content h1 {
+  .hero-content h1 {
     font-size: 3.2em;
     line-height: 1.1;
   }
@@ -347,12 +352,13 @@ body {
   /* Media query for smaller screens */
   @media (max-width: 768px) {
     .hero-content h1 {
-      font-size: 2em;       /* Smaller font size */
+      font-size: 2em; /* Smaller font size */
       line-height: 1.2;
     }
   }
+  
   /* General styles */
-body {
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -410,4 +416,89 @@ body {
     }
   }
   
-  /* Other styles... */
+  /* MovieDetails styles */
+  .movie-details {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .movie-details h2 {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .movie-details img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-details p {
+    color: #666;
+  }
+  
+  /* StreamBuy styles */
+  .stream-buy {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .stream-buy h2 {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .stream-buy img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .stream-buy p {
+    color: #666;
+  }
+  .movie-item {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-item img {
+    border-radius: 8px 8px 0 0; /* Rounded corners on top */
+    width: 100%;
+    display: block;
+  }
+  
+  .movie-item p {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+  }
+  .search-bar {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center; /* Center the input */
+  }
+  
+  .search-bar input {
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  

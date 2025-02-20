@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import '../styles.css'; // Updated import statement
+import '../styles.css';
 
 const MovieDetails = ({ apiKey }) => {
   const { id } = useParams();
