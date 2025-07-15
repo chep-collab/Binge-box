@@ -1,6 +1,4 @@
-Thanks for sharing, Mercy! I explored your `Binge-box` repo—it’s a **React + Vite** starter project with ESLint configured, which is a great base for building a media or entertainment app. Let’s give it a polished README that highlights your setup and leaves room for future features.
 
----
 
 ### 📝 Refined `README.md` for `Binge-box`
 
