@@ -164,11 +164,7 @@ npm run build
 
 ## 📸 Screenshots
 
-_Add screenshots of your homepage, component previews, and mobile layout here._
 
-```markdown
-![Homepage](./public/screenshots/homepage.png)
-![Mobile View](./public/screenshots/mobile.png)
 ```
 
 ---
@@ -209,5 +205,5 @@ MIT
 
 ---
 
-Want help scaffolding the movie listing feature or prepping this for deployment next? We’re nearly done polishing your entire portfolio—this one could be a fun, visual showcase! 🍿✨
+
 
